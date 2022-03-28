@@ -1,0 +1,1228 @@
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/lab-bash (master)
+$ git clone https://github.com/romeojab/lab-bash.git
+Cloning into 'lab-bash'...
+remote: Enumerating objects: 47, done.
+remote: Counting objects: 100% (6/6), done.
+remote: Compressing objects: 100% (5/5), done.
+remote: Total 47 (delta 1), reused 5 (delta 1), pack-reused 41
+Receiving objects: 100% (47/47), 12.28 KiB | 314.00 KiB/s, done.
+Resolving deltas: 100% (16/16), done.
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/lab-bash (master)
+$ ls
+Git-Bash.txt  inputs/    lorem/       outputs/
+exercices/    lab-bash/  lorem-copy/  readme.md
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/lab-bash (master)
+$ cd lorem-copy/
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/lab-bash/lorem-copy (master)
+$ ls
+at.txt  dummy_file.txt  lorem.txt  sed.txt
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/lab-bash/lorem-copy (master)
+$ cd ..
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/lab-bash (master)
+$ cd ..
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs
+$ ls
+lab-bash/
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs
+$ git status
+fatal: not a git repository (or any of the parent directories): .git
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs
+$ git clone https://github.com/romeojab/lab-git.git
+Cloning into 'lab-git'...
+remote: Enumerating objects: 14, done.
+remote: Counting objects: 100% (14/14), done.
+remote: Compressing objects: 100% (10/10), done.
+remote: Total 14 (delta 2), reused 12 (delta 1), pack-reused 0
+Receiving objects: 100% (14/14), done.
+Resolving deltas: 100% (2/2), done.
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs
+$ ls
+lab-bash/  lab-git/
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs
+$ rm lab-git
+rm: cannot remove 'lab-git': Is a directory
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs
+$ rmdir lab-git
+rmdir: failed to remove 'lab-git': Directory not empty
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs
+$ rmdir lab-git --force
+rmdir: unknown option -- force
+Try 'rmdir --help' for more information.
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs
+$ git clone https://github.com/romeojab/lab-git.git
+fatal: destination path 'lab-git' already exists and is not an empty directory.
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs
+$ cd lab-git/
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/lab-git (master)
+$ ls
+readme.md
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/lab-git (master)
+$ rm readme.md
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/lab-git (master)
+$ cd ..
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs
+$ rmdir lab-git
+rmdir: failed to remove 'lab-git': Directory not empty
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs
+$ cd lab-git/
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/lab-git (master)
+$ ls
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/lab-git (master)
+$ ls -a
+./  ../  .git/  .github/
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/lab-git (master)
+$ rm .git
+rm: cannot remove '.git': Is a directory
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/lab-git (master)
+$ cd ..
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs
+$ mv lab-git/ lab-git-error
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs
+$ ls
+lab-bash/  lab-git-error/
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs
+$ git clone https://github.com/romeojab/lab-git.git
+Cloning into 'lab-git'...
+remote: Enumerating objects: 14, done.
+remote: Counting objects: 100% (14/14), done.
+remote: Compressing objects: 100% (10/10), done.
+remote: Total 14 (delta 2), reused 12 (delta 1), pack-reused 0
+Receiving objects: 100% (14/14), done.
+Resolving deltas: 100% (2/2), done.
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs
+$ ls
+lab-bash/  lab-git/  lab-git-error/
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs
+$ cd lab-git
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/lab-git (master)
+$ echo "# IronRomeo" >> README.md
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/lab-git (master)
+$ git init
+Reinitialized existing Git repository in C:/Users/Romeo/IH-Labs/lab-git/.git/
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/lab-git (master)
+$ git add README.md
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/lab-git (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   readme.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/lab-git (master)
+$ git commit -m "first commit"
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   readme.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/lab-git (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   readme.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/lab-git (master)
+$ git branch -M main
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/lab-git (main)
+$ git remote add origin https://github.com/romeojab/IronRomeo.git
+error: remote origin already exists.
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/lab-git (main)
+$ git push -u origin main
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+remote: Create a pull request for 'main' on GitHub by visiting:
+remote:      https://github.com/romeojab/lab-git/pull/new/main
+remote:
+To https://github.com/romeojab/lab-git.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/lab-git (main)
+$ git branch
+* main
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/lab-git (main)
+$ ls
+readme.md
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/lab-git (main)
+$ head readme.md
+![logo_ironhack_blue 7](https://user-images.githubusercontent.com/23629340/40541063-a07a0a8a-601a-11e8-91b5-2f13e4e6b441.png)
+
+# Lab | Git
+
+## Introduction
+
+Being able to use both, git and GitHub, is an important skill every software/data engineer must possess. This is even more important when it comes to the ability to handle codes in collaborative projects. This lab will help you learn how to use git/GitHub and understand its importance.
+
+## Instructions
+
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/lab-git (main)
+$ cd ..
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs
+$ git status
+fatal: not a git repository (or any of the parent directories): .git
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs
+$ echo "# IronRomeo" >> README.md
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs
+$ ls
+README.md  lab-bash/  lab-git/  lab-git-error/
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs
+$ head README.md
+# IronRomeo
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs
+$ git init
+Initialized empty Git repository in C:/Users/Romeo/IH-Labs/.git/
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs (master)
+$ git add README.md
+warning: LF will be replaced by CRLF in README.md.
+The file will have its original line endings in your working directory
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs (master)
+$ git commit -m "first commit"
+[master (root-commit) 6b040f2] first commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 README.md
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        lab-bash/
+        lab-git-error/
+        lab-git/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs (master)
+$ git branch -M main
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs (main)
+$ git remote add origin https://github.com/romeojab/IronRomeo.git
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs (main)
+$ git push -u origin main
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 224 bytes | 74.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/romeojab/IronRomeo.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs (main)
+$ git branch
+* main
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs (main)
+$ ls
+README.md  lab-bash/  lab-git/  lab-git-error/
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs (main)
+$ git clone https://github.com/romeojab/IronRomeo.git
+Cloning into 'IronRomeo'...
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 3 (delta 0), pack-reused 0
+Receiving objects: 100% (3/3), done.
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs (main)
+$ ls
+IronRomeo/  README.md  lab-bash/  lab-git/  lab-git-error/
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs (main)
+$ cd IronRomeo/
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/IronRomeo (main)
+$ ls
+README.md
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/IronRomeo (main)
+$ head README.md
+# IronRomeo
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/IronRomeo (main)
+$ vim README.md
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/IronRomeo (main)
+$ cd ..
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs (main)
+$ head README.md
+# IronRomeo
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs (main)
+$ rm README.md
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs (main)
+$ ls
+IronRomeo/  lab-bash/  lab-git/  lab-git-error/
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs (main)
+$ cd IronRomeo/
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/IronRomeo (main)
+$ cd ..
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    README.md
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        IronRomeo/
+        lab-bash/
+        lab-git-error/
+        lab-git/
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs (main)
+$ cd lab-git-error/
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/lab-git-error (master)
+$ ls
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/lab-git-error (master)
+$ ls -a
+./  ../  .git/  .github/
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/lab-git-error (master)
+$ rm .git .github
+rm: cannot remove '.git': Is a directory
+rm: cannot remove '.github': Is a directory
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/lab-git-error (master)
+$ rmdir .git .github
+rmdir: failed to remove '.git': Directory not empty
+rmdir: failed to remove '.github': Directory not empty
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/lab-git-error (master)
+$ cd .git
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/lab-git-error/.git (GIT_DIR!)
+$ ls -a
+./  ../  HEAD  config  description  hooks/  index  info/  logs/  objects/  packed-refs  refs/
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/lab-git-error/.git (GIT_DIR!)
+$ cd ..
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/lab-git-error (master)
+$ cd ..
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs (main)
+$ ls
+IronRomeo/  lab-bash/  lab-git/  lab-git-error/
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs (main)
+$ git add .
+warning: adding embedded git repository: IronRomeo
+hint: You've added another git repository inside your current repository.
+hint: Clones of the outer repository will not contain the contents of
+hint: the embedded repository and will not know how to obtain it.
+hint: If you meant to add a submodule, use:
+hint:
+hint:   git submodule add <url> IronRomeo
+hint:
+hint: If you added this path by mistake, you can remove it from the
+hint: index with:
+hint:
+hint:   git rm --cached IronRomeo
+hint:
+hint: See "git help submodule" for more information.
+warning: adding embedded git repository: lab-bash
+warning: adding embedded git repository: lab-git-error
+warning: adding embedded git repository: lab-git
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   IronRomeo
+        deleted:    README.md
+        new file:   lab-bash
+        new file:   lab-git
+        new file:   lab-git-error
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+  (commit or discard the untracked or modified content in submodules)
+        modified:   lab-bash (modified content, untracked content)
+        modified:   lab-git (modified content)
+        modified:   lab-git-error (modified content)
+
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs (main)
+$ ls
+IronRomeo/  lab-bash/  lab-git/  lab-git-error/
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs (main)
+$ ls -a
+./  ../  .git/  IronRomeo/  lab-bash/  lab-git/  lab-git-error/
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs (main)
+$ cd .git/
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/.git (GIT_DIR!)
+$ ls
+COMMIT_EDITMSG  HEAD  config  description  hooks/  index  info/  logs/  objects/  refs/
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/.git (GIT_DIR!)
+$ rm index
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/.git (GIT_DIR!)
+$ rmdir hooks/
+rmdir: failed to remove 'hooks/': Directory not empty
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/.git (GIT_DIR!)
+$ cd hooks/
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/.git/hooks (GIT_DIR!)
+$ ls -a
+./   applypatch-msg.sample*  fsmonitor-watchman.sample*  pre-applypatch.sample*  pre-merge-commit.sample*  pre-rebase.sample*   prepare-commit-msg.sample*  update.sample*
+../  commit-msg.sample*      post-update.sample*         pre-commit.sample*      pre-push.sample*          pre-receive.sample*  push-to-checkout.sample*
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/.git/hooks (GIT_DIR!)
+$ rm applypatch-msg.sample
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/.git/hooks (GIT_DIR!)
+$ rm fsmonitor-watchman.sample
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/.git/hooks (GIT_DIR!)
+$ rm pre-applypatch.sample
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/.git/hooks (GIT_DIR!)
+$ rm pre-merge-commit.sample
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/.git/hooks (GIT_DIR!)
+$ rm pre-re
+pre-rebase.sample   pre-receive.sample
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/.git/hooks (GIT_DIR!)
+$ rm pre-re
+pre-rebase.sample   pre-receive.sample
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/.git/hooks (GIT_DIR!)
+$ rm pre-rebase.sample
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/.git/hooks (GIT_DIR!)
+$ rm prepare-commit-msg.sample
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/.git/hooks (GIT_DIR!)
+$ rm update.sample
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/.git/hooks (GIT_DIR!)
+$ rm commit-msg.sample
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/.git/hooks (GIT_DIR!)
+$ rm post-update.sample
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/.git/hooks (GIT_DIR!)
+$ rm pre-commit.sample
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/.git/hooks (GIT_DIR!)
+$ rm pre-push.sample
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/.git/hooks (GIT_DIR!)
+$ rm pre-receive.sample
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/.git/hooks (GIT_DIR!)
+$ rm push-to-checkout.sample
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/.git/hooks (GIT_DIR!)
+$ ls -a
+./  ../
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/.git/hooks (GIT_DIR!)
+$ cd ..
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/.git (GIT_DIR!)
+$ rmdir hooks/
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/.git (GIT_DIR!)
+$ ls
+COMMIT_EDITMSG  HEAD  config  description  info/  logs/  objects/  refs/
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/.git (GIT_DIR!)
+$ rm HEAD
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/.git
+$ ls
+COMMIT_EDITMSG  config  description  info/  logs/  objects/  refs/
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/.git
+$ rm config
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/.git
+$ rm description
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/.git
+$ ls
+COMMIT_EDITMSG  info/  logs/  objects/  refs/
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/.git
+$ ls -a
+./  ../  COMMIT_EDITMSG  info/  logs/  objects/  refs/
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/.git
+$ rm COMMIT_EDITMSG
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/.git
+$ ls -a
+./  ../  info/  logs/  objects/  refs/
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/.git
+$ rmdir info/
+rmdir: failed to remove 'info/': Directory not empty
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/.git
+$ cd info/
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/.git/info
+$ ls -a
+./  ../  exclude
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/.git/info
+$ rm exclude
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/.git/info
+$ ls -a
+./  ../
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/.git/info
+$ ls
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/.git/info
+$ cd ..
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/.git
+$ rmdir info/
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/.git
+$ ls
+logs/  objects/  refs/
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/.git
+$ rmdir logs/
+rmdir: failed to remove 'logs/': Directory not empty
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/.git
+$ cd logs/
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/.git/logs
+$ ls
+HEAD  refs/
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/.git/logs
+$ rm HEAD
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/.git/logs
+$ rmdir refs/
+rmdir: failed to remove 'refs/': Directory not empty
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/.git/logs
+$ cd refs/
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/.git/logs/refs
+$ ls
+heads/  remotes/
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/.git/logs/refs
+$ rmdir  heads/
+rmdir: failed to remove 'heads/': Directory not empty
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/.git/logs/refs
+$ cd heads/
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/.git/logs/refs/heads
+$ ls
+main
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/.git/logs/refs/heads
+$ rm main
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/.git/logs/refs/heads
+$ ls -a
+./  ../
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/.git/logs/refs/heads
+$ cd ..
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/.git/logs/refs
+$ rmdir heads/
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/.git/logs/refs
+$ rmdir remotes/
+rmdir: failed to remove 'remotes/': Directory not empty
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/.git/logs/refs
+$ cd remotes/
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/.git/logs/refs/remotes
+$ ls
+origin/
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/.git/logs/refs/remotes
+$ rmdir origin/
+rmdir: failed to remove 'origin/': Directory not empty
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/.git/logs/refs/remotes
+$ cd origin/
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/.git/logs/refs/remotes/origin
+$ ls
+main
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/.git/logs/refs/remotes/origin
+$ rm main
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/.git/logs/refs/remotes/origin
+$ cd ..
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/.git/logs/refs/remotes
+$ rmdir origin/
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/.git/logs/refs/remotes
+$ ls
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/.git/logs/refs/remotes
+$ ls -a
+./  ../
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/.git/logs/refs/remotes
+$ cd ..
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/.git/logs/refs
+$ rmdir remotes/
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/.git/logs/refs
+$ ls
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/.git/logs/refs
+$ cd ..
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/.git/logs
+$ rmdir refs/
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/.git/logs
+$ ls
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/.git/logs
+$ ls -a
+./  ../
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/.git/logs
+$ cd ..
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/.git
+$ rmdir logs/
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/.git
+$ ls
+objects/  refs/
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/.git
+$ cd objects/
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/.git/objects
+$ ls
+5e/  6b/  7b/  info/  pack/
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/.git/objects
+$ rmdir 5e
+rmdir: failed to remove '5e': Directory not empty
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/.git/objects
+$ cd 5e/
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/.git/objects/5e
+$ ls
+eca312420708a2ef886fdac3024a565de72626
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/.git/objects/5e
+$ rm eca312420708a2ef886fdac3024a565de72626
+rm: remove write-protected regular file 'eca312420708a2ef886fdac3024a565de72626'? y
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/.git/objects/5e
+$ ls -a
+./  ../
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/.git/objects/5e
+$ cd ..
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/.git/objects
+$ rmdir 5e/
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/.git/objects
+$ cd 6b/
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/.git/objects/6b
+$ ls -a
+./  ../  040f27f14f473efb5347213d3670f75f668890
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/.git/objects/6b
+$ rm 040f27f14f473efb5347213d3670f75f668890
+rm: remove write-protected regular file '040f27f14f473efb5347213d3670f75f668890'? y
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/.git/objects/6b
+$ cd ..
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/.git/objects
+$ rmdir 6b/
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/.git/objects
+$ cd 7b/
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/.git/objects/7b
+$ ls -a
+./  ../  f3429a4e0f3265c40d2a5a4fa5c385f9513a03
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/.git/objects/7b
+$ rm f3429a4e0f3265c40d2a5a4fa5c385f9513a03
+rm: remove write-protected regular file 'f3429a4e0f3265c40d2a5a4fa5c385f9513a03'? y
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/.git/objects/7b
+$ cd ..
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/.git/objects
+$ rmdir 7b/
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/.git/objects
+$ cd info/
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/.git/objects/info
+$ ls -a
+./  ../
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/.git/objects/info
+$ cd ..
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/.git/objects
+$ rmdir info/
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/.git/objects
+$ ls
+pack/
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/.git/objects
+$ rmdir pack/
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/.git/objects
+$ ls -a
+./  ../
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/.git/objects
+$ cd ..
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/.git
+$ rmdir objects/
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/.git
+$ ls -a
+./  ../  refs/
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/.git
+$ rmdir refs/
+rmdir: failed to remove 'refs/': Directory not empty
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/.git
+$ cd refs
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/.git/refs
+$ cd ..
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/.git
+$ rmdir refs/
+rmdir: failed to remove 'refs/': Directory not empty
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/.git
+$ cd refs/
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/.git/refs
+$ ls -a
+./  ../  heads/  remotes/  tags/
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/.git/refs
+$ cd ..
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/.git
+$ cd ..
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs
+$ git rm --cached IronRomeo
+fatal: not a git repository (or any of the parent directories): .git
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs
+$ cd .git/
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/.git
+$ ls
+refs/
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/.git
+$ cd refs/
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/.git/refs
+$ ls -a
+./  ../  heads/  remotes/  tags/
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/.git/refs
+$ cd heads/
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/.git/refs/heads
+$ ls -a
+./  ../  main
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/.git/refs/heads
+$ rm main
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/.git/refs/heads
+$ cd ..
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/.git/refs
+$ rmdir heads/
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/.git/refs
+$ rmdir remotes/
+rmdir: failed to remove 'remotes/': Directory not empty
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/.git/refs
+$ cd remotes/
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/.git/refs/remotes
+$ ls -a
+./  ../  origin/
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/.git/refs/remotes
+$ rmdir origin/
+rmdir: failed to remove 'origin/': Directory not empty
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/.git/refs/remotes
+$ cd origin/
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/.git/refs/remotes/origin
+$ ls -a
+./  ../  main
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/.git/refs/remotes/origin
+$ rm main
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/.git/refs/remotes/origin
+$ cd ..
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/.git/refs/remotes
+$ rmdir origin/
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/.git/refs/remotes
+$ cd ..
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/.git/refs
+$ rmdir remotes/
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/.git/refs
+$ rmdir tags/
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/.git/refs
+$ ls -a
+./  ../
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/.git/refs
+$ cd ..
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/.git
+$ rmdir refs/
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/.git
+$ ls -a
+./  ../
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/.git
+$ cd ..
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs
+$ rmdir .git/
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs
+$ ls -a
+./  ../  IronRomeo/  lab-bash/  lab-git/  lab-git-error/
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs
+$ git status
+fatal: not a git repository (or any of the parent directories): .git
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs
+$ git add .
+fatal: not a git repository (or any of the parent directories): .git
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs
+$ ls
+IronRomeo/  lab-bash/  lab-git/  lab-git-error/
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs
+$ cd IronRomeo/
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/IronRomeo (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/IronRomeo (main)
+$ git branch
+* main
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/IronRomeo (main)
+$ ls
+README.md
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/IronRomeo (main)
+$ touch about.txt
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/IronRomeo (main)
+$ ls
+README.md  about.txt
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/IronRomeo (main)
+$ echo "I play a great sport called Ultimate Frisbee" >> about.txt
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/IronRomeo (main)
+$ head about.txt
+I play a great sport called Ultimate Frisbee
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/IronRomeo (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        about.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/IronRomeo (main)
+$ git add .
+warning: LF will be replaced by CRLF in about.txt.
+The file will have its original line endings in your working directory
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/IronRomeo (main)
+$ git commit -m "first commit with about"
+[main 3d2346d] first commit with about
+ 1 file changed, 1 insertion(+)
+ create mode 100644 about.txt
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/IronRomeo (main)
+$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/IronRomeo (main)
+$ git push
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 333 bytes | 66.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/romeojab/IronRomeo.git
+   6b040f2..3d2346d  main -> main
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/IronRomeo (main)
+$ cd ..
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs
+$ git clone https://github.com/romeojab/IronClara.git
+Cloning into 'IronClara'...
+remote: Enumerating objects: 6, done.
+remote: Counting objects: 100% (6/6), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 6 (delta 0), reused 6 (delta 0), pack-reused 0
+Receiving objects: 100% (6/6), done.
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs
+$ ls
+IronClara/  IronRomeo/  lab-bash/  lab-git/  lab-git-error/
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs
+$ cd IronClara/
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/IronClara (main)
+$ git branch
+* main
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/IronClara (main)
+$ git checkout -b classmate
+Switched to a new branch 'classmate'
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/IronClara (classmate)
+$ git branch
+* classmate
+  main
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/IronClara (classmate)
+$ touch romeo.txt
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/IronClara (classmate)
+$ echo "I enrolled Ironhack's Data Analytics bootcamp because I loved problem solving and creating visualisations that provides a deaper insight of the data" >> romeo.txt
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/IronClara (classmate)
+$ head romeo.txt
+I enrolled Ironhack's Data Analytics bootcamp because I loved problem solving and creating visualisations that provides a deaper insight of the data
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/IronClara (classmate)
+$ vim romeo.txt
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/IronClara (classmate)
+$ head romeo.txt
+I enrolled Ironhack's Data Analytics bootcamp because I loved problem solving and creating visualisations that provides a deeper insight of the data
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/IronClara (classmate)
+$ git status
+On branch classmate
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        romeo.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/IronClara (classmate)
+$ git add .
+warning: LF will be replaced by CRLF in romeo.txt.
+The file will have its original line endings in your working directory
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/IronClara (classmate)
+$ git commit -m "adding file to Clara's folder"
+[classmate 21f1569] adding file to Clara's folder
+ 1 file changed, 1 insertion(+)
+ create mode 100644 romeo.txt
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/IronClara (classmate)
+$ git status
+On branch classmate
+nothing to commit, working tree clean
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/IronClara (classmate)
+$ git push
+fatal: The current branch classmate has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin classmate
+
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/IronClara (classmate)
+$ git push --set-upstream origin classmate
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 436 bytes | 218.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+remote: Create a pull request for 'classmate' on GitHub by visiting:
+remote:      https://github.com/romeojab/IronClara/pull/new/classmate
+remote:
+To https://github.com/romeojab/IronClara.git
+ * [new branch]      classmate -> classmate
+branch 'classmate' set up to track 'origin/classmate'.
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/IronClara (classmate)
+$ git pull
+Already up to date.
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/IronClara (classmate)
+$ cd ..
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs
+$ cd IronClara/
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/IronClara (classmate)
+$ ls
+README.md  about.txt  romeo.txt
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/IronClara (classmate)
+$ git branch
+* classmate
+  main
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/IronClara (classmate)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/IronClara (main)
+$ ls
+README.md  about.txt
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/IronClara (main)
+$ cd ..
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs
+$ cd IronRomeo/
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/IronRomeo (main)
+$ ls
+README.md  about.txt
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/IronRomeo (main)
+$ git checkout classmate
+error: pathspec 'classmate' did not match any file(s) known to git
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/IronRomeo (main)
+$ git branch
+* main
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/IronRomeo (main)
+$ cd ..
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs
+$ cd IronClara/
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/IronClara (main)
+$ git branch
+  classmate
+* main
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/IronClara (main)
+$ git checkout classmate
+Switched to branch 'classmate'
+Your branch is up to date with 'origin/classmate'.
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/IronClara (classmate)
+$ cd ..
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs
+$ cd IronRomeo/
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/IronRomeo (main)
+$ ls
+README.md  about.txt
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/IronRomeo (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/IronRomeo (main)
+$ git branchg
+git: 'branchg' is not a git command. See 'git --help'.
+
+The most similar command is
+        branch
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/IronRomeo (main)
+$ git branch
+* main
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/IronRomeo (main)
+$ cd ..
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs
+$ cd IronRomeo/
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/IronRomeo (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/IronRomeo (main)
+$ git pull
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (4/4), done.
+remote: Total 4 (delta 0), reused 3 (delta 0), pack-reused 0
+Unpacking objects: 100% (4/4), 1.00 KiB | 4.00 KiB/s, done.
+From https://github.com/romeojab/IronRomeo
+   3d2346d..873896a  main       -> origin/main
+Updating 3d2346d..873896a
+Fast-forward
+ Clara.txt | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 Clara.txt
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/IronRomeo (main)
+$ ls
+Clara.txt  README.md  about.txt
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/IronRomeo (main)
+$ git branch
+* main
+
+Romeo@DESKTOP-JACV908 MINGW64 ~/IH-Labs/IronRomeo (main)
+$
