@@ -23,7 +23,7 @@ Now let's practice the collaboration part.
 
 ### Pair Programming Exercise
 
-Pair yourself with a classmate. Send the link of your GitHub repository to your pair via Slack. Now each of you should perform the following set of actions:
+Pair yourself with a classmate. Send the link of your GitHub repository to your pair via Slack or Discord. Now each of you should perform the following set of actions:
 
 1. Fork your classmate's repository.
 2. Clone the repository, so that you have it locally and can make changes.
